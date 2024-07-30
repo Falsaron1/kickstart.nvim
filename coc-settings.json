@@ -1,0 +1,12 @@
+{
+  "python.pythonPath": "python",
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": true,
+  "coc.preferences.formatOnSaveFiletypes": ["python"],
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.diagnosticMode": "workspace"
+}
+
