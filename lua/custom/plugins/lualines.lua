@@ -5,7 +5,7 @@ return {
   config = function()
     require('lualine').setup {
       options = {
-        theme = 'auto', -- You can customize the theme here
+        theme = 'tokyonight-night', -- You can customize the theme here
         -- Add other lualine options if needed
       },
     }
