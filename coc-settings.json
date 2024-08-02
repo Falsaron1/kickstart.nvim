@@ -2,11 +2,38 @@
   "python.pythonPath": "python",
   "python.formatting.provider": "black",
   "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": false,
+  "python.linting.pylintEnabled": false,
   "coc.preferences.formatOnSaveFiletypes": ["python"],
   "python.analysis.autoSearchPaths": true,
   "python.analysis.useLibraryCodeForTypes": true,
-  "python.analysis.diagnosticMode": "workspace"
+  "python.analysis.diagnosticMode": "workspace",
+  "diagnostic-languageserver.filetypes": {
+    "python": "ruff"
+  },
+  "diagnostic-languageserver.linters": {
+    "ruff": {
+      "command": "ruff",
+      "args": ["--stdin-filename", "%filepath", "-"],
+      "sourceName": "ruff",
+      "formatLines": 1,
+      "formatPattern": [
+        "^.*?:(\\d+):(\\d+): (\\w+) (.*)$",
+        {
+          "line": 1,
+          "column": 2,
+          "security": 3,
+          "message": 4
+        }
+      ],
+      "securities": {
+        "E": "error",
+        "W": "warning",
+        "F": "error",
+        "N": "info"
+      }
+    }
+  }
 }
+
 
